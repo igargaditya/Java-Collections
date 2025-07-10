@@ -1,3 +1,5 @@
+package Map;
+
 import java.util.LinkedHashMap;
 
 public class LRUCache<K, V> extends LinkedHashMap<K, V> {
