@@ -76,20 +76,45 @@
 ### 2.2.1 SortedMap (Interface)
 
 - **Declaration:** `SortedMap<K,V> map = new TreeMap<>();`
-- **Thread Safety:** Not Thread Safe
 - **Use Case:** When we want to find the range of keys in the map
 - **Extends:** Map
 
 ### 2.2.2 NavigableMap (Interface)
 
 - **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
+- **Use Case:** Stores the key in any natural order or custom order
+- **Extends:** SortedMap
+
+### 2.2.3 TreeMap (Class)
+
+- **Declaration:** `Map<K,V> map = new TreeMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Stores the key in any natural order or custom order
-- **Extends:** NavigableMap
+- **Implements:** NavigableMap
 
-### 2.2.2 TreeMap (Class)
+### 2.3.1 HashTable (Legacy Class)
 
-- **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
-- **Thread Safety:** Not Thread Safe
-- **Use Case:** When we want to find the element closet to any of the keys.
-- **Implements:** SortedMap
+- **Declaration:** `HashTable<K,V> map = new HashTable<>();`
+- **Thread Safety:** Thread Safe
+- **Use Case:** When no key or value can null but is slow as synchronized and get methods are also slow
+- **Implements:** Map
+
+### 2.4.1 ConcurrentMap (Interface)
+
+- **Declaration:** `ConcurrentMap<K,V> map = new ConcurrentHashMap<>();`
+- **Use Case:** When Locking required
+- **Extends:** Map
+
+### 2.4.2 ConcurrentHashMap
+
+- **Declaration:** `ConcurrentHashMap<K,V> map = new ConcurrentHashMap<>();`
+- **Thread Safety:** Thread Safe
+- **Use Case:** When Locking required and no specific order needed, Concurrent Version of HashMap
+- **Implements:** ConcurrentMap
+
+### 2.4.3 ConcurrentSkipListMap
+
+- **Declaration:** `ConcurrentHashMap<K,V> map = new ConcurrentHashMap<>();`
+- **Thread Safety:** Thread Safe
+- **Use Case:** When Locking required and some sorted order needed, Concurrent Version of TreeMap
+- **Implements:** ConcurrentMap and NavigableMap
