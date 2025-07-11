@@ -45,30 +45,51 @@
 
 ![alt text](https://github.com/igargaditya/Java-Collections/blob/main/Map_Interface.png?raw=true)
 
-### 2.1 HashMap
+### 2.1.1 HashMap
 
 - **Declaration:** `Map<K,V> map = new HashMap<>(initialCapacity, loadFactor);`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** General-purpose map using `hashCode()` and `equals()`.
 - **Implements:** Map
 
-### 2.2 LinkedHashMap
+### 2.1.2 LinkedHashMap
 
 - **Declaration:** `Map<K,V> map = new LinkedHashMap<>(initialCapacity, loadFactor, accessOrder);`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Preserves insertion/access order. Used in LRU cache implementations.
 - **Implements:** Map and extends HashMap
 
-### 2.3 WeakHashMap
+### 2.1.3 WeakHashMap
 
 - **Declaration:** `Map<K,V> map = new WeakHashMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Keys that should be garbage collected when no longer referenced elsewhere.
 - **Implements:** Map
 
-### 2.4 IdentityHashMap
+### 2.1.4 IdentityHashMap
 
 - **Declaration:** `Map<K,V> map = new IdentityHashMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Compares keys using `==` (reference equality) instead of `equals()`.
-- **Implements:** Map
+- **Extends:** Map
+
+### 2.2.1 SortedMap (Interface)
+
+- **Declaration:** `SortedMap<K,V> map = new TreeMap<>();`
+- **Thread Safety:** Not Thread Safe
+- **Use Case:** When we want to find the range of keys in the map
+- **Extends:** Map
+
+### 2.2.2 NavigableMap (Interface)
+
+- **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
+- **Thread Safety:** Not Thread Safe
+- **Use Case:** Stores the key in any natural order or custom order
+- **Extends:** NavigableMap
+
+### 2.2.2 TreeMap (Class)
+
+- **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
+- **Thread Safety:** Not Thread Safe
+- **Use Case:** When we want to find the element closet to any of the keys.
+- **Implements:** SortedMap
