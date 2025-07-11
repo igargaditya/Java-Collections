@@ -1,3 +1,5 @@
+package Map;
+
 import java.util.Hashtable;
 
 public class Hash_Table {
