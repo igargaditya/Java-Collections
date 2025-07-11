@@ -1,10 +1,12 @@
 package Map;
 
-import java.util.concurrent.ConcurrentHashMap;
+import java.util.concurrent.ConcurrentSkipListMap;
 
-public class Concurrent_Hashmap {
+public class ConcurrentSkipList_Map {
     public static void main(String[] args) {
-        ConcurrentHashMap<Integer, Integer> map1 = new ConcurrentHashMap<>();
+
+        ConcurrentSkipListMap<Integer, Integer> map1 = new ConcurrentSkipListMap<>((a, b) -> b - a);
+
         Thread t1 = new Thread(() -> {
             for (int i = 10; i >= 0; i--) {
                 map1.put(i, 10);
@@ -24,7 +26,7 @@ public class Concurrent_Hashmap {
             System.out.println(e);
         }
         // thread safe
-        // Ans in any order
+        // Ans in sorted order
         System.out.println(map1);
 
     }
