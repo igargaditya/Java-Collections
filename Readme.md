@@ -1,4 +1,4 @@
-# This repository contains Everything about Java Collection Framework
+## This repository contains Everything about Java Collection Framework
 
 ![alt text](https://github.com/igargaditya/Java-Collections/blob/main/Hierarchy.png?raw=true)
 
