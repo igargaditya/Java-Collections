@@ -59,45 +59,45 @@
 - **Use Case:** Preserves insertion/access order. Used in LRU cache implementations.
 - **Implements:** Map and extends HashMap
 
-### 2.1.3 WeakHashMap
-
-- **Declaration:** `Map<K,V> map = new WeakHashMap<>();`
-- **Thread Safety:** Not Thread Safe
-- **Use Case:** Keys that should be garbage collected when no longer referenced elsewhere.
-- **Implements:** Map
-
-### 2.1.4 IdentityHashMap
+### 2.1.3 IdentityHashMap
 
 - **Declaration:** `Map<K,V> map = new IdentityHashMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Compares keys using `==` (reference equality) instead of `equals()`.
 - **Extends:** Map
 
-### 2.2.1 SortedMap (Interface)
+### 2.1.4 WeakHashMap
 
-- **Declaration:** `SortedMap<K,V> map = new TreeMap<>();`
-- **Use Case:** When we want to find the range of keys in the map
-- **Extends:** Map
-
-### 2.2.2 NavigableMap (Interface)
-
-- **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
-- **Use Case:** Stores the key in any natural order or custom order
-- **Extends:** SortedMap
-
-### 2.2.3 TreeMap (Class)
-
-- **Declaration:** `Map<K,V> map = new TreeMap<>();`
+- **Declaration:** `Map<K,V> map = new WeakHashMap<>();`
 - **Thread Safety:** Not Thread Safe
-- **Use Case:** Stores the key in any natural order or custom order
-- **Implements:** NavigableMap
+- **Use Case:** Keys that should be garbage collected when no longer referenced elsewhere.
+- **Implements:** Map
 
-### 2.3.1 HashTable (Legacy Class)
+### 2.2.1 HashTable (Legacy Class)
 
 - **Declaration:** `HashTable<K,V> map = new HashTable<>();`
 - **Thread Safety:** Thread Safe
 - **Use Case:** When no key or value can null but is slow as synchronized and get methods are also slow
 - **Implements:** Map
+
+### 2.3.1 SortedMap (Interface)
+
+- **Declaration:** `SortedMap<K,V> map = new TreeMap<>();`
+- **Use Case:** When we want to find the range of keys in the map
+- **Extends:** Map
+
+### 2.3.2 NavigableMap (Interface)
+
+- **Declaration:** `NavigableMap<K,V> map = new TreeMap<>();`
+- **Use Case:** Stores the key in any natural order or custom order
+- **Extends:** SortedMap
+
+### 2.3.3 TreeMap (Class)
+
+- **Declaration:** `Map<K,V> map = new TreeMap<>();`
+- **Thread Safety:** Not Thread Safe
+- **Use Case:** Stores the key in any natural order or custom order
+- **Implements:** NavigableMap
 
 ### 2.4.1 ConcurrentMap (Interface)
 
