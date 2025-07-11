@@ -10,12 +10,14 @@
 - **Initial Capacity:** 10
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Fast random access, better for read-heavy operations.
+- **Implements:** List
 
 ### 1.2 LinkedList
 
 - **Declaration:** `List<T> list = new LinkedList<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Frequent insertions/removals from head or tail.
+- **Implements:** List
 
 ### 1.3 Vector
 
@@ -23,6 +25,7 @@
 - **Initial Capacity:** 10
 - **Thread Safety:** Thread Safe (synchronized)
 - **Use Case:** Legacy alternative to `ArrayList` in multi-threaded scenarios.
+- **Implements:** List
 
 ### 1.4 Stack
 
@@ -36,29 +39,36 @@
 - **Declaration:** `List<T> list = new CopyOnWriteArrayList<>();`
 - **Thread Safety:** Thread Safe
 - **Use Case:** Best for read-heavy operations in multi-threaded environments.
+- **Implements:** List
 
-## 2. Map Implementations (Not part of Collection Framework and is an independent Interface)
+## 2. Map Implementations (Independent Interface)
+
+![alt text](https://github.com/igargaditya/Java-Collections/blob/main/Map_Interface.png?raw=true)
 
 ### 2.1 HashMap
 
 - **Declaration:** `Map<K,V> map = new HashMap<>(initialCapacity, loadFactor);`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** General-purpose map using `hashCode()` and `equals()`.
+- **Implements:** Map
 
 ### 2.2 LinkedHashMap
 
 - **Declaration:** `Map<K,V> map = new LinkedHashMap<>(initialCapacity, loadFactor, accessOrder);`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Preserves insertion/access order. Used in LRU cache implementations.
+- **Implements:** Map and extends HashMap
 
 ### 2.3 WeakHashMap
 
 - **Declaration:** `Map<K,V> map = new WeakHashMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Keys that should be garbage collected when no longer referenced elsewhere.
+- **Implements:** Map
 
 ### 2.4 IdentityHashMap
 
 - **Declaration:** `Map<K,V> map = new IdentityHashMap<>();`
 - **Thread Safety:** Not Thread Safe
 - **Use Case:** Compares keys using `==` (reference equality) instead of `equals()`.
+- **Implements:** Map
