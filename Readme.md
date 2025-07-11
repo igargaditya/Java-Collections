@@ -37,7 +37,7 @@
 - **Thread Safety:** Thread Safe
 - **Use Case:** Best for read-heavy operations in multi-threaded environments.
 
-## 2. Map Implementations
+## 2. Map Implementations (Not part of Collection Framework and is an independent Interface)
 
 ### 2.1 HashMap
 
