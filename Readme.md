@@ -114,7 +114,14 @@
 
 ### 2.4.3 ConcurrentSkipListMap
 
-- **Declaration:** `ConcurrentHashMap<K,V> map = new ConcurrentHashMap<>();`
+- **Declaration:** `ConcurrentHashMap<K,V> map = new ConcurrentSkipListMap<>();`
 - **Thread Safety:** Thread Safe
 - **Use Case:** When Locking required and some sorted order needed, Concurrent Version of TreeMap
 - **Implements:** ConcurrentMap and NavigableMap
+
+### 2.5.1 EnumMap
+
+- **Declaration:** `Map<K,V> map = new EnumMap<>(enum.class);`
+- **Thread Safety:** Not Thread Safe
+- **Use Case:** When working with Enum values as faster due to no hashing
+- **Implements:** Map
