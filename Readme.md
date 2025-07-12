@@ -126,14 +126,14 @@
 - **Use Case:** When working with Enum values as faster due to no hashing
 - **Implements:** Map
 
-### 3. Comparator vs Comparable
+## 3. Comparator vs Comparable
 
-## 3.1 Comparator
+### 3.1 Comparator
 
 - The Comparator interface in Java is used to define custom sorting logic for objects — outside the object’s class. It's extremely useful when you want to sort the same class in different ways (e.g., by name, age, salary).
 - Has the compare() method
 
-## 3.2 Comparable
+### 3.2 Comparable
 
 - It's used when you want to define a natural ordering for objects within the class itself.
 - Used to define the natural sort order of the class
