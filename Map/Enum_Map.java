@@ -1,3 +1,5 @@
+package Map;
+
 import java.util.EnumMap;
 import java.util.Map;
 
