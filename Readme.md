@@ -138,3 +138,36 @@
 - It's used when you want to define a natural ordering for objects within the class itself.
 - Used to define the natural sort order of the class
 - Has the compareTo() method
+
+## 4. Set Implementations
+
+### 3.1 HashSet
+
+- Just like Hashmap it implements the set interface and is used to store the key values in non ordered manner
+
+### 3.2 LinkedHashSet
+
+- Just like LinkedHashMap it implements the set interface and is used to key values in the order they are inserted.
+
+### 3.3 TreeSet
+
+- Just like TreeMao it implements the set interface, SortedSet interface and Navigable Interface and is used to key values in sorted order
+
+### 3.4 EnumSet
+
+- Just like EnunMap it is advisable to use EnumSet for enums as they reduce their complexity as number of hashes is equal to number of ordinals.
+
+### 3.5 UnmodifiableSet
+
+- Any set can be made unmodifiable using Collections.unmodifiableSet(set) and using
+- set.of(1,2,3,4) methods.
+
+### 3.6 ConcurrentSkipListSet
+
+- Thread Safe version when we want to store elements which are sorted in some order
+- They are weakly consistent and they may or may not reflect the changes
+
+### 3.7 CopyOnWriteArraySetEnumSet
+
+- When we want a thread safe version of a hashset then we use CopyonWriteArraySet, This is consistent as it reflects changes after reading has been done.
+- When Reading Frequent Operations then use this
