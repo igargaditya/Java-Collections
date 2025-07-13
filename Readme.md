@@ -4,6 +4,8 @@
 
 ## 1. List Implementations
 
+![alt text](https://github.com/igargaditya/Java-Collections/blob/main/List.png?raw=true)
+
 ### 1.1 ArrayList
 
 - **Declaration:** `List<T> list = new ArrayList<>(initialCapacity,loadfactor);`
@@ -140,6 +142,8 @@
 - Has the compareTo() method
 
 ## 4. Set Implementations
+
+![alt text](https://github.com/igargaditya/Java-Collections/blob/main/Set.png?raw=true)
 
 ### 4.1 HashSet
 
