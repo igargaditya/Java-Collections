@@ -175,3 +175,16 @@
 
 - When we want a thread safe version of a hashset then we use CopyonWriteArraySet, This is consistent as it reflects changes after reading has been done.
 - When Reading Frequent Operations then use this
+
+## 5. Java 8
+
+- Lambda Expressions
+- Stream API
+- Date and Time API
+- Base64 Encode Decode
+- Method Reference and Constructor Reference
+- Static and Default methods in Interface
+- Functional Interface
+- Optional Class
+- Java I/O improvements
+- Collection API Improvements
